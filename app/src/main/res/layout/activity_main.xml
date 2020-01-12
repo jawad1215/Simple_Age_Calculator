@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="ageData"
+            type="com.example.simpleagecalculator.AgeData" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#212121"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/ageTitleId"
+        style="@style/textStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{ageData.ageTitle}"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/ageEditText"
+        style="@style/textStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint"
+        android:inputType="number"
+        android:textColorHint="@color/hintColor" />
+
+    <TextView
+        android:id="@+id/displayText"
+        style="@style/textStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@={ageData.ageDataStore"
+        android:textAlignment="center"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_margin"
+        android:background="@color/colorAccent"
+        android:text="@string/btn_Name"
+        android:textColor="@color/hintColor" />
+</LinearLayout>
+
+</layout>
